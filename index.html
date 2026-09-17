@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Limitlm 的个人引导页 — 无限进步，未来可期" />
+  <meta name="theme-color" content="#1a1c22" />
+  <meta name="color-scheme" content="dark" />
+  <title>Limitlm</title>
+  <!-- GitHub 资源经 gh-proxy.com 反代，避免 github.com / avatars 直连超时 -->
+  <link rel="icon" href="https://gh-proxy.com/https://avatars.githubusercontent.com/u/60577891?s=64&v=4" />
+  <link rel="preconnect" href="https://gh-proxy.com" />
+  <link rel="preconnect" href="https://t.alcy.cc" />
+  <link rel="preload" as="image" href="https://gh-proxy.com/https://avatars.githubusercontent.com/u/60577891?s=200&v=4" fetchpriority="high" />
+  <!-- 本地 Pacifico，避免第三方字体 CDN 渲染阻塞 -->
+  <link rel="preload" href="assets/pacifico-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript>
+    <style>
+      #bg-layer-a {
+        opacity: 1;
+        background-image: url("assets/bg-pc.webp");
+      }
+      @media (max-width: 768px) {
+        #bg-layer-a { background-image: url("assets/bg-mp.webp"); }
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <div class="bg-stack" aria-hidden="true">
+    <div class="bg-layer" id="bg-layer-a"></div>
+    <div class="bg-layer" id="bg-layer-b"></div>
+  </div>
+  <div class="scrim" aria-hidden="true">
+    <div class="scrim-base"></div>
+    <div class="scrim-adaptive"></div>
+  </div>
+
+  <div class="page">
+    <main class="stage">
+      <!-- 1. 头像 -->
+      <section class="section section-avatar" aria-label="头像">
+        <a class="avatar-link" href="https://github.com/limitlm" target="_blank" rel="noopener noreferrer" aria-label="访问 GitHub 主页">
+          <img
+            class="avatar"
+            id="avatar"
+            src="https://gh-proxy.com/https://avatars.githubusercontent.com/u/60577891?s=200&v=4"
+            alt="Limitlm 的头像"
+            width="112"
+            height="112"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </a>
+      </section>
+
+      <div class="v-rule" aria-hidden="true"></div>
+
+      <!-- 2. 个人简介 -->
+      <section class="section section-bio" id="sec-bio" aria-label="个人简介">
+        <div class="bio-inner">
+          <div class="h-rule" aria-hidden="true"></div>
+          <h1 class="name">Limitlm</h1>
+          <p class="tagline">
+            <span class="tagline-text" id="tagline-text">无限进步，未来可期</span><span class="caret" id="caret" aria-hidden="true"></span>
+          </p>
+          <div class="h-rule" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <div class="v-rule" aria-hidden="true"></div>
+
+      <!-- 3. 个人网站跳转 -->
+      <section class="section section-sites" aria-label="个人网站">
+        <div class="sites-wrap" id="sites-wrap">
+          <!-- 由 app.js 按 SITE_GROUPS 渲染；加站只需改 app.js 数据 -->
+        </div>
+      </section>
+    </main>
+
+    <!-- 4. 社交 + 版权（底部固定） -->
+    <footer class="footer">
+      <!-- 社交图标：统一使用 Tabler Icons（MIT）outline 线条风格 -->
+      <nav class="socials" aria-label="社交链接">
+        <a class="social-btn" href="https://wpa.qq.com/msgrd?v=3&uin=283304662&site=qq&menu=yes" target="_blank" rel="noopener noreferrer" aria-label="QQ 添加好友" title="QQ：283304662">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9.748a14.716 14.716 0 0 0 11.995 -.052c.275 -9.236 -11.104 -11.256 -11.995 .052"/>
+            <path d="M18 10c.984 2.762 1.949 4.765 2 7.153c.014 .688 -.664 1.346 -1.184 .303c-.346 -.696 -.952 -1.181 -1.816 -1.456"/>
+            <path d="M17 16c.031 1.831 .147 3.102 -1 4"/>
+            <path d="M8 20c-1.099 -.87 -.914 -2.24 -1 -4"/>
+            <path d="M6 10c-.783 2.338 -1.742 4.12 -1.968 6.43c-.217 2.227 .716 1.644 1.16 .917c.296 -.487 .898 -.934 1.808 -1.347"/>
+            <path d="M15.898 13l-.476 -2"/>
+            <path d="M8 20l-1.5 1c-.5 .5 -.5 1 .5 1h10c1 0 1 -.5 .5 -1l-1.5 -1"/>
+            <path d="M12.75 7a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+            <path d="M9.25 7a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+          </svg>
+        </a>
+        <button type="button" class="social-btn" id="btn-email" aria-label="复制邮箱" title="点击复制：283304662@qq.com">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"/>
+            <path d="M3 7l9 6l9 -6"/>
+          </svg>
+        </button>
+        <a class="social-btn" href="https://github.com/limitlm" target="_blank" rel="noopener noreferrer" aria-label="GitHub 主页" title="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/>
+          </svg>
+        </a>
+      </nav>
+      <div class="copyright">
+        <p class="copy-line">COPYRIGHT © <span id="year">2025</span> LIMITLM</p>
+        <p class="copy-line">ALL RIGHTS RESERVED</p>
+        <!-- 备案信息预留位：有备案号后取消注释并填写 -->
+        <!-- <p class="copy-line icp"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">京ICP备XXXXXXXX号</a></p> -->
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>邮箱已复制</div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
